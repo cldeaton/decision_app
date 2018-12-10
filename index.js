@@ -13,7 +13,7 @@ app.use(function(req, res, next) {
 
 app.post("/", function(req, res){
   console.log(req.body)
-  command = `USER_NUMBER='${req.body.userNumber}' MESSAGE_BODY='${req.body.messageBody}' node ../sms_app/index.js`;
+  command = `USER_NUMBER='${req.body.userNumber}' MESSAGE_BODY='${req.body.messageBody}' node ../sms-app/index.js`;
   console.log(command)
   exec(command, function(err, stdout, stderror){
     console.log(stdout);
